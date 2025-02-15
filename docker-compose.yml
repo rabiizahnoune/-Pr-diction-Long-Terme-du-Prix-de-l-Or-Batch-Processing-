@@ -1,0 +1,28 @@
+version: '3'
+services:
+  sleek-airflow:
+    image: rabiiairflow:latest
+    depends_on:
+      - postgres  # Assure que PostgreSQL démarre avant Airflow
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow_db
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+    command: airflow standalone
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_airflow
+    environment:
+      POSTGRES_DB: airflow_db
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Stockage persistant
+
+volumes:
+  postgres_data:
