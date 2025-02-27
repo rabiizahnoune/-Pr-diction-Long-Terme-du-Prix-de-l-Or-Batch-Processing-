@@ -1,28 +1,177 @@
-version: '3'
-services:
-  sleek-airflow:
-    image: rabiiairflow:latest
-    depends_on:
-      - postgres  # Assure que PostgreSQL démarre avant Airflow
-    environment:
-      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow_db
-    volumes:
-      - ./airflow:/opt/airflow
-    ports:
-      - "8080:8080"
-    command: airflow standalone
+version: "3.8"
 
+services:
   postgres:
-    image: postgres:latest
-    container_name: postgres_airflow
+    image: postgres:13
     environment:
-      POSTGRES_DB: airflow_db
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
-    ports:
-      - "5432:5432"
+      POSTGRES_DB: airflow
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # Stockage persistant
+      - postgres_db_volume:/var/lib/postgresql/data
+    networks:
+      - airflow_network
+
+  airflow-init:
+    image: apache/airflow:2.7.1
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./scripts/mapreduce:/mnt/hadoop_data/mapreduce
+      - /var/run/docker.sock:/var/run/docker.sock
+      - hadoop_datanode:/mnt/hadoop_data
+    entrypoint: bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --email admin@example.com --role Admin"
+    networks:
+      - airflow_network
+
+  airflow-webserver:
+    build:
+      context: ./
+      dockerfile: apache.dockerfile
+    restart: always
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__API__AUTH_BACKENDS=airflow.api.auth.backend.basic_auth
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - airflow-init
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - hadoop_datanode:/mnt/hadoop_data
+      - ./scripts/mapreduce:/mnt/hadoop_data/mapreduce
+    command: webserver
+    networks:
+      - airflow_network
+
+  airflow-scheduler:
+    build:
+      context: ./
+      dockerfile: apache.dockerfile
+    restart: always
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - hadoop_datanode:/mnt/hadoop_data
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./scripts/mapreduce:/mnt/hadoop_data/mapreduce
+    command: scheduler
+    depends_on:
+      - postgres
+    networks:
+      - airflow_network
+
+  namenode:
+    build:
+      context: ./
+      dockerfile: hadoop.dockerfile
+    container_name: namenode
+    ports:
+      - "9870:9870"
+    volumes:
+      - namenode_data:/hadoop/dfs/name
+      - hadoop_datanode:/mnt/hadoop_data
+      - ./scripts/mapreduce:/mnt/hadoop_data/mapreduce
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - HDFS_CONF_dfs_replication=1
+      - CLUSTER_NAME=test
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+        reservations:
+          memory: 2g
+    networks:
+      - airflow_network
+
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode1
+    ports:
+      - "9864:9864"
+    volumes:
+      - datanode1_data:/hadoop/dfs/data
+      - hadoop_datanode:/mnt/hadoop_data
+      - ./scripts/mapreduce:/mnt/hadoop_data/mapreduce
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - HDFS_CONF_dfs_replication=1
+      - CLUSTER_NAME=test
+    depends_on:
+      - namenode
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+        reservations:
+          memory: 2g
+    networks:
+      - airflow_network
+
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=gold_price_cluster
+    networks:
+      - airflow_network
+  
+
+  streamlit:
+    build:
+      context: ./streamlit
+      dockerfile: streamlit.dockerfile
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - cassandra
+    volumes:
+      - ./streamlit:/app
+    networks:
+      - airflow_network
+
+  ml-model:
+    build:
+      context: ./ml-model
+      dockerfile: ml.dockerfile
+    container_name: ml-model
+    depends_on:
+      - cassandra
+    volumes:
+      - ./ml-model:/app
+      - hadoop_datanode:/mnt/hadoop_data
+    command: ["python", "train_model.py"]
+    networks:
+      - airflow_network
 
 volumes:
-  postgres_data:
+  postgres_db_volume:
+  namenode_data:
+  datanode1_data:
+  hadoop_datanode:
+  cassandra_data:
+
+networks:
+  airflow_network:
+    driver: bridge
