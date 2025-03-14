@@ -1,0 +1,14 @@
+[2025-03-14T20:45:08.373+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm manual__2025-03-14T20:45:01.729144+00:00 [queued]>
+[2025-03-14T20:45:08.385+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm manual__2025-03-14T20:45:01.729144+00:00 [queued]>
+[2025-03-14T20:45:08.387+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-03-14T20:45:08.405+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): prepare_data_for_lstm> on 2025-03-14 20:45:01.729144+00:00
+[2025-03-14T20:45:08.419+0000] {standard_task_runner.py:57} INFO - Started process 8955 to run task
+[2025-03-14T20:45:08.425+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yfinance_lstm_training_dag', 'prepare_data_for_lstm', 'manual__2025-03-14T20:45:01.729144+00:00', '--job-id', '458', '--raw', '--subdir', 'DAGS_FOLDER/re_entrainment_model.py', '--cfg-path', '/tmp/tmpw80p6igd']
+[2025-03-14T20:45:08.430+0000] {standard_task_runner.py:85} INFO - Job 458: Subtask prepare_data_for_lstm
+[2025-03-14T20:45:08.498+0000] {task_command.py:415} INFO - Running <TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm manual__2025-03-14T20:45:01.729144+00:00 [running]> on host bf727b93dd82
+[2025-03-14T20:45:08.687+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='etudiant' AIRFLOW_CTX_DAG_ID='yfinance_lstm_training_dag' AIRFLOW_CTX_TASK_ID='prepare_data_for_lstm' AIRFLOW_CTX_EXECUTION_DATE='2025-03-14T20:45:01.729144+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-14T20:45:01.729144+00:00'
+[2025-03-14T20:45:08.814+0000] {logging_mixin.py:151} INFO - Données préparées avec succès.
+[2025-03-14T20:45:08.817+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-03-14T20:45:08.843+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yfinance_lstm_training_dag, task_id=prepare_data_for_lstm, execution_date=20250314T204501, start_date=20250314T204508, end_date=20250314T204508
+[2025-03-14T20:45:08.968+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-14T20:45:09.011+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

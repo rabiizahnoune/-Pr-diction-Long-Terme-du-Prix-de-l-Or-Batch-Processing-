@@ -3,5 +3,5 @@ yfinance
 python-dateutil
 hdfs
 prophet
-tensorflow==2.15.0
+tensorflow
 scikit-learn

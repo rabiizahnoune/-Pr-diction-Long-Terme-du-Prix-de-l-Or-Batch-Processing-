@@ -1,0 +1,23 @@
+[2025-03-14T15:36:24.859+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm scheduled__2025-02-15T00:00:00+00:00 [queued]>
+[2025-03-14T15:36:24.882+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm scheduled__2025-02-15T00:00:00+00:00 [queued]>
+[2025-03-14T15:36:24.884+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-03-14T15:36:24.927+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): prepare_data_for_lstm> on 2025-02-15 00:00:00+00:00
+[2025-03-14T15:36:24.958+0000] {standard_task_runner.py:57} INFO - Started process 4460 to run task
+[2025-03-14T15:36:24.968+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yfinance_lstm_training_dag', 'prepare_data_for_lstm', 'scheduled__2025-02-15T00:00:00+00:00', '--job-id', '411', '--raw', '--subdir', 'DAGS_FOLDER/re_entrainment_model.py', '--cfg-path', '/tmp/tmpmzxvi1mf']
+[2025-03-14T15:36:24.978+0000] {standard_task_runner.py:85} INFO - Job 411: Subtask prepare_data_for_lstm
+[2025-03-14T15:36:25.088+0000] {task_command.py:415} INFO - Running <TaskInstance: yfinance_lstm_training_dag.prepare_data_for_lstm scheduled__2025-02-15T00:00:00+00:00 [running]> on host cc0110907453
+[2025-03-14T15:36:25.240+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='etudiant' AIRFLOW_CTX_DAG_ID='yfinance_lstm_training_dag' AIRFLOW_CTX_TASK_ID='prepare_data_for_lstm' AIRFLOW_CTX_EXECUTION_DATE='2025-02-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-15T00:00:00+00:00'
+[2025-03-14T15:36:24.730+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/re_entrainment_model.py", line 24, in prepare_data_for_lstm
+    cluster = Cluster(['cassandra'], port=9042)
+  File "cassandra/cluster.py", line 1231, in cassandra.cluster.Cluster.__init__
+cassandra.UnresolvableContactPoints: {}
+[2025-03-14T15:36:24.751+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=yfinance_lstm_training_dag, task_id=prepare_data_for_lstm, execution_date=20250215T000000, start_date=20250314T153624, end_date=20250314T153624
+[2025-03-14T15:36:24.772+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 411 for task prepare_data_for_lstm ({}; 4460)
+[2025-03-14T15:36:24.805+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-14T15:36:24.836+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

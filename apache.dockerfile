@@ -21,5 +21,10 @@ RUN pip install --no-cache-dir \
     ta \
     pandas \
     hdfs \
-    cassandra-driver
+    cassandra-driver \
+    tensorflow\
+    scikit-learn \
+    typing_extensions\
+    pydantic
+
 
