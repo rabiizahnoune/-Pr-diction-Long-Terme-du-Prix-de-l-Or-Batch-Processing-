@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   postgres:
     image: postgres:13
@@ -161,9 +159,14 @@ services:
     volumes:
       - ./ml-model:/app
       - hadoop_datanode:/mnt/hadoop_data
-    command: ["python", "train_model.py"]
+    ports:
+      - "8888:8888"
     networks:
       - airflow_network
+    stdin_open: true  # Garde stdin ouvert
+    tty: true
+    
+      
 
 volumes:
   postgres_db_volume:

@@ -1,0 +1,36 @@
+[2025-03-13T21:06:14.141+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yfinance_ingestion_historique_gold.fetch_data scheduled__2025-03-09T00:00:00+00:00 [queued]>
+[2025-03-13T21:06:14.175+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yfinance_ingestion_historique_gold.fetch_data scheduled__2025-03-09T00:00:00+00:00 [queued]>
+[2025-03-13T21:06:14.177+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-03-13T21:06:14.247+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_data> on 2025-03-09 00:00:00+00:00
+[2025-03-13T21:06:14.274+0000] {standard_task_runner.py:57} INFO - Started process 1603 to run task
+[2025-03-13T21:06:14.299+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yfinance_ingestion_historique_gold', 'fetch_data', 'scheduled__2025-03-09T00:00:00+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historique.py', '--cfg-path', '/tmp/tmpq9kuxvxd']
+[2025-03-13T21:06:14.330+0000] {standard_task_runner.py:85} INFO - Job 70: Subtask fetch_data
+[2025-03-13T21:06:14.575+0000] {task_command.py:415} INFO - Running <TaskInstance: yfinance_ingestion_historique_gold.fetch_data scheduled__2025-03-09T00:00:00+00:00 [running]> on host 6947d18d7453
+[2025-03-13T21:06:14.838+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='etudiant' AIRFLOW_CTX_DAG_ID='yfinance_ingestion_historique_gold' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-09T00:00:00+00:00'
+[2025-03-13T21:06:16.381+0000] {logging_mixin.py:151} INFO - Erreur lors de la récupération de GC=F: "['datetime'] not in index"
+[2025-03-13T21:06:16.382+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/ingest_historique.py", line 57, in fetch_gold_data_monthly
+    df = df[columns_to_keep]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3767, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5877, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5941, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['datetime'] not in index"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_historique.py", line 73, in fetch_gold_data_monthly
+    raise ValueError(f"Erreur lors de la récupération des données: {e}")
+ValueError: Erreur lors de la récupération des données: "['datetime'] not in index"
+[2025-03-13T21:06:16.407+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=yfinance_ingestion_historique_gold, task_id=fetch_data, execution_date=20250309T000000, start_date=20250313T210614, end_date=20250313T210616
+[2025-03-13T21:06:16.431+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 70 for task fetch_data (Erreur lors de la récupération des données: "['datetime'] not in index"; 1603)
+[2025-03-13T21:06:16.461+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-13T21:06:16.497+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -480,3 +480,206 @@ ModuleNotFoundError: No module named 'yfinance'
 [2025-02-27T14:20:50.852+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:20:50.852+0000] {dag.py:2915} INFO - Sync 1 DAGs
 [2025-02-27T14:20:50.876+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:20:50.876+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
 [2025-02-27T14:20:50.899+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.645 seconds
+[2025-02-27T14:21:21.485+0000] {processor.py:157} INFO - Started process (PID=928) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:21.487+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:21:21.490+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:21.489+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:21.968+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:21.993+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:21.993+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:21:22.015+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:22.014+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:21:22.037+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.557 seconds
+[2025-02-27T14:21:52.225+0000] {processor.py:157} INFO - Started process (PID=934) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:52.226+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:21:52.228+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:52.227+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:52.707+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:21:52.744+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:52.743+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:21:52.794+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:21:52.794+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:21:52.820+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.599 seconds
+[2025-02-27T14:22:23.235+0000] {processor.py:157} INFO - Started process (PID=940) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:23.236+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:22:23.238+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:23.237+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:23.755+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:23.784+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:23.783+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:22:23.809+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:23.809+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:22:23.831+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.600 seconds
+[2025-02-27T14:22:54.086+0000] {processor.py:157} INFO - Started process (PID=946) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:54.088+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:22:54.090+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:54.090+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:54.576+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:22:54.604+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:54.603+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:22:54.627+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:22:54.627+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:22:54.656+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.580 seconds
+[2025-02-27T14:23:25.019+0000] {processor.py:157} INFO - Started process (PID=952) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:25.021+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:23:25.023+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:25.022+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:25.603+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:25.634+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:25.633+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:23:25.661+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:25.660+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:23:25.692+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.678 seconds
+[2025-02-27T14:23:55.912+0000] {processor.py:157} INFO - Started process (PID=958) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:55.914+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:23:55.916+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:55.916+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:56.466+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:23:56.503+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:56.502+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:23:56.535+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:23:56.534+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:23:56.567+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.662 seconds
+[2025-02-27T14:24:27.168+0000] {processor.py:157} INFO - Started process (PID=964) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:27.171+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:24:27.173+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:27.172+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:28.336+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:28.407+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:28.404+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:24:28.491+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:28.489+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:24:28.554+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 1.395 seconds
+[2025-02-27T14:24:58.756+0000] {processor.py:157} INFO - Started process (PID=970) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:58.758+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:24:58.760+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:58.759+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:59.310+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:24:59.351+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:59.348+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:24:59.387+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:24:59.387+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:24:59.421+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.671 seconds
+[2025-02-27T14:25:29.865+0000] {processor.py:157} INFO - Started process (PID=976) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:25:29.866+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:25:29.867+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:25:29.867+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:25:30.282+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:25:30.311+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:25:30.311+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:25:30.341+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:25:30.341+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:25:30.382+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.520 seconds
+[2025-02-27T14:26:00.793+0000] {processor.py:157} INFO - Started process (PID=982) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:00.795+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:26:00.797+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:00.796+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:01.260+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:01.295+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:01.295+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:26:01.324+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:01.324+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:26:01.358+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.568 seconds
+[2025-02-27T14:26:31.706+0000] {processor.py:157} INFO - Started process (PID=988) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:31.707+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:26:31.709+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:31.709+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:32.317+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:26:32.346+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:32.345+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:26:32.374+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:26:32.373+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:26:32.395+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.694 seconds
+[2025-02-27T14:27:02.482+0000] {processor.py:157} INFO - Started process (PID=994) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:02.484+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:27:02.485+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:02.485+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:02.888+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:02.918+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:02.917+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:27:02.939+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:02.939+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:27:02.964+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.485 seconds
+[2025-02-27T14:27:33.084+0000] {processor.py:157} INFO - Started process (PID=1000) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:33.085+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:27:33.087+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:33.086+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:33.598+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:27:33.627+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:33.626+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:27:33.649+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:27:33.649+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:27:33.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.594 seconds
+[2025-02-27T14:28:04.019+0000] {processor.py:157} INFO - Started process (PID=1006) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:04.020+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:28:04.021+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:04.021+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:04.471+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:04.495+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:04.494+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:28:04.518+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:04.518+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:28:04.544+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.528 seconds
+[2025-02-27T14:28:35.034+0000] {processor.py:157} INFO - Started process (PID=1012) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:35.037+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:28:35.046+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:35.045+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:36.315+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:28:36.348+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:36.348+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:28:36.653+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:28:36.653+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:28:36.714+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 1.688 seconds
+[2025-02-27T14:29:06.861+0000] {processor.py:157} INFO - Started process (PID=1018) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:06.864+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:29:06.865+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:06.865+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:07.407+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:07.441+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:07.441+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:29:07.482+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:07.481+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:29:07.525+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.669 seconds
+[2025-02-27T14:29:37.987+0000] {processor.py:157} INFO - Started process (PID=1024) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:37.988+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:29:37.990+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:37.989+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:38.528+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:29:38.562+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:38.562+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:29:38.600+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:29:38.600+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:29:38.629+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.645 seconds
+[2025-02-27T14:30:08.996+0000] {processor.py:157} INFO - Started process (PID=1030) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:08.997+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:30:08.998+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:08.998+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:09.478+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:09.506+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:09.506+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:30:09.530+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:09.530+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:30:09.557+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.564 seconds
+[2025-02-27T14:30:39.989+0000] {processor.py:157} INFO - Started process (PID=1036) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:39.991+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:30:39.993+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:39.992+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:38.666+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:30:38.692+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:38.691+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:30:38.905+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:30:38.904+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:30:38.944+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.866 seconds
+[2025-02-27T14:31:09.365+0000] {processor.py:157} INFO - Started process (PID=1042) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:09.368+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:31:09.371+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:09.370+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:10.281+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:10.373+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:10.372+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:31:10.420+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:10.419+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:31:10.452+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 1.093 seconds
+[2025-02-27T14:31:40.767+0000] {processor.py:157} INFO - Started process (PID=1048) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:40.769+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:31:40.770+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:40.770+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:41.224+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:31:41.249+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:41.248+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:31:41.273+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:31:41.273+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:31:41.291+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.528 seconds
+[2025-02-27T14:32:11.737+0000] {processor.py:157} INFO - Started process (PID=1054) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:11.762+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:32:11.773+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:11.772+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:12.318+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:12.366+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:12.365+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:32:12.407+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:12.407+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:32:12.442+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.714 seconds
+[2025-02-27T14:32:42.640+0000] {processor.py:157} INFO - Started process (PID=1060) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:42.642+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:32:42.644+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:42.643+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:43.072+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:32:43.101+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:43.101+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:32:43.322+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:32:43.322+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:32:43.350+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.713 seconds
+[2025-02-27T14:33:13.717+0000] {processor.py:157} INFO - Started process (PID=1066) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:33:13.718+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:33:13.720+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:33:13.719+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:33:14.255+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:33:14.284+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:33:14.283+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:33:14.309+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:33:14.309+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:33:14.337+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.624 seconds
+[2025-02-27T14:42:21.241+0000] {processor.py:157} INFO - Started process (PID=1074) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:21.257+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:42:21.297+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:21.263+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:22.621+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:22.662+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:22.661+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:42:22.720+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:22.720+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:42:22.753+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 1.531 seconds
+[2025-02-27T14:42:52.938+0000] {processor.py:157} INFO - Started process (PID=1080) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:52.939+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:42:52.941+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:52.940+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:51.899+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:42:51.933+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:51.933+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:42:51.963+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:42:51.963+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:42:51.987+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.554 seconds
+[2025-02-27T14:43:22.296+0000] {processor.py:157} INFO - Started process (PID=1086) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:22.298+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:43:22.302+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:22.300+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:22.845+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:22.884+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:22.883+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:43:22.912+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:22.912+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:43:23.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.762 seconds
+[2025-02-27T14:43:53.223+0000] {processor.py:157} INFO - Started process (PID=1092) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:53.224+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:43:53.226+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:53.225+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:53.982+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:43:54.016+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:54.015+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:43:54.046+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:43:54.044+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:43:54.072+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 0.856 seconds
+[2025-02-27T14:44:24.359+0000] {processor.py:157} INFO - Started process (PID=1098) to work on /opt/airflow/dags/pipeline.py
+[2025-02-27T14:44:24.367+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2025-02-27T14:44:24.375+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:44:24.373+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:44:25.405+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yfinance_ingestion_dag']) retrieved from /opt/airflow/dags/pipeline.py
+[2025-02-27T14:44:25.495+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:44:25.494+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-02-27T14:44:25.563+0000] {logging_mixin.py:151} INFO - [2025-02-27T14:44:25.563+0000] {dag.py:3696} INFO - Setting next_dagrun for yfinance_ingestion_dag to 2025-02-27T00:00:00+00:00, run_after=2025-02-28T00:00:00+00:00
+[2025-02-27T14:44:25.629+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline.py took 1.282 seconds

@@ -1,0 +1,15 @@
+[2025-03-13T21:12:26.455+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yfinance_ingestion_historique_gold.fetch_data manual__2025-03-13T21:12:23.921213+00:00 [queued]>
+[2025-03-13T21:12:26.464+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yfinance_ingestion_historique_gold.fetch_data manual__2025-03-13T21:12:23.921213+00:00 [queued]>
+[2025-03-13T21:12:26.465+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-03-13T21:12:26.491+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_data> on 2025-03-13 21:12:23.921213+00:00
+[2025-03-13T21:12:26.499+0000] {standard_task_runner.py:57} INFO - Started process 1771 to run task
+[2025-03-13T21:12:26.505+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yfinance_ingestion_historique_gold', 'fetch_data', 'manual__2025-03-13T21:12:23.921213+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historique.py', '--cfg-path', '/tmp/tmpld77mm03']
+[2025-03-13T21:12:26.510+0000] {standard_task_runner.py:85} INFO - Job 76: Subtask fetch_data
+[2025-03-13T21:12:26.580+0000] {task_command.py:415} INFO - Running <TaskInstance: yfinance_ingestion_historique_gold.fetch_data manual__2025-03-13T21:12:23.921213+00:00 [running]> on host 6947d18d7453
+[2025-03-13T21:12:26.749+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='etudiant' AIRFLOW_CTX_DAG_ID='yfinance_ingestion_historique_gold' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-13T21:12:23.921213+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-13T21:12:23.921213+00:00'
+[2025-03-13T21:12:27.715+0000] {logging_mixin.py:151} INFO - Colonnes disponibles après reset_index :
+[2025-03-13T21:12:27.716+0000] {logging_mixin.py:151} INFO - ['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits']
+[2025-03-13T21:12:27.917+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-03-13T21:12:27.943+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yfinance_ingestion_historique_gold, task_id=fetch_data, execution_date=20250313T211223, start_date=20250313T211226, end_date=20250313T211227
+[2025-03-13T21:12:27.983+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-13T21:12:28.027+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

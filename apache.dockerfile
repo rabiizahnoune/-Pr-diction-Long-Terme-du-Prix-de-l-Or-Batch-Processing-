@@ -14,8 +14,12 @@ RUN apt-get update && apt-get install -y \
 USER airflow
 
 
+
 # Installer les dépendances Python
 RUN pip install --no-cache-dir \
     yfinance \
     ta \
     pandas \
+    hdfs \
+    cassandra-driver
+
